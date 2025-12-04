@@ -6,16 +6,15 @@ class WorkerManager:
         self.workerList = []
 
     def controller(self):
-        self.workerList = FileManager.betolt_alkalmazottakat("alkalmazottak.txt"):
-        highestSalaryName, highestSalaryNumber=self.legnagyobb_fizetett()
-        print("Legtöbbet kereső ember: {:^10}\n".format(highestSalaryName, highestSalaryNumber))
+        self.workerList = FileManager.betolt_alkalmazottakat("alkalmazottak.txt")
+        name,salary=self.legnagyobb_fizetett(), worker.fizetes
+        print(f"Legjobban fizetett ember: {name} fizetése:{salary}")
 
 
     def legnagyobb_fizetett(self):
             max=0
             Highest=int(self.workerList[0])
             for worker in self.workerList:
-                if Highest<int(worker.fizetes):
-                    Highest=int(worker.fizetes)
-                    max = worker.nev
-            return max, tempHighest
+                if int(worker.fizetes) > int(highest_worker.fizetes):
+                    highest_worker = worker
+            return highest_worker.nev, highest_worker.fizetes
